@@ -28,7 +28,7 @@ const Services = () => {
               </li>
               <li>
                 <BsCheckLg className='service__list-icon'/>
-                <p>TResponsive Web Design with React Components</p>
+                <p>Responsive Web Design with React Components</p>
               </li>
             </ul>
             {/* END OF FRONT END TAGE */}

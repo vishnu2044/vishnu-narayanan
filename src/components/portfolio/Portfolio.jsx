@@ -59,24 +59,6 @@ const Portfolio = () => {
             </div>
           </article>
 
-          {/* <article className='protfolio__item'>
-            <div className='portfolio__item-image'>
-              <img src={BookStall} alt="" />
-            </div>
-            <h3>BookStall Ecom website (django)</h3>
-            <a href="https://github.com/vishnu2044/BookStall" className='btn'>GitHub</a>
-            <a href="https://bookstall.store/" className='btn btn-primary' target='_blank' >live demo</a>
-          </article>
-
-          <article className='protfolio__item'>
-            <div className='portfolio__item-image'>
-              <img src={MsiStatic} alt="" />
-            </div>
-            <h3>Msi front page</h3>
-            <a href="https://github.com/vishnu2044/msi-webpage-front-page" className='btn'>GitHub</a>
-            <a href="https://vishnu2044.github.io/msi-webpage-front-page/" className='btn btn-primary' target='_blank' >live demo</a>
-          </article> */}
-
         </div>
 
       </section>

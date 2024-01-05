@@ -15,6 +15,22 @@ const Experience = () => {
               <article className='experience__details'>
                 <BsPatchCheckFill className="experience__details_icon" />
                 <div>
+                  <h4>React</h4>
+                  <small className='text-light'>intermediate</small>
+                </div>
+              </article>
+
+              <article className='experience__details'>
+                <BsPatchCheckFill className="experience__details_icon" />
+                <div>
+                  <h4>Tailwind</h4>
+                  <small className='text-light'>intermediate</small>
+                </div>
+              </article>
+              
+              <article className='experience__details'>
+                <BsPatchCheckFill className="experience__details_icon" />
+                <div>
                   <h4>HTML</h4>
                   <small className='text-light'>intermediate</small>
                 </div>
@@ -43,13 +59,8 @@ const Experience = () => {
                   <small className='text-light'>intermediate</small>
                 </div>
               </article>
-              <article className='experience__details'>
-                <BsPatchCheckFill className="experience__details_icon" />
-                <div>
-                  <h4>React</h4>
-                  <small className='text-light'>intermediate</small>
-                </div>
-              </article>
+
+
             </div>
 
           </div>
@@ -69,6 +80,24 @@ const Experience = () => {
                 <BsPatchCheckFill className="experience__details_icon" />
                 <div>
                   <h4>django</h4>
+                  <small className='text-light'>Experienced</small>
+                </div>
+
+              </article>
+
+              <article className='experience__details'>
+                <BsPatchCheckFill className="experience__details_icon" />
+                <div>
+                  <h4>django Rest API</h4>
+                  <small className='text-light'>Experienced</small>
+                </div>
+
+              </article>
+
+              <article className='experience__details'>
+                <BsPatchCheckFill className="experience__details_icon" />
+                <div>
+                  <h4>django Rest API</h4>
                   <small className='text-light'>Experienced</small>
                 </div>
 
