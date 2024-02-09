@@ -39,8 +39,7 @@ const About = () => {
             </article>
           </div>
           <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          </p>
+          Passionate self-taught Python Django Full Stack Developer with a strong foundation in Python and Django, demonstrating mastery in back-end development. Proficient in utilizing React to create dynamic and responsive front-end experiences. Eager to apply my skills in a challenging and innovative work environment, contributing to cutting-edge projects and continually advancing my expertise.          </p>
             
           </div>
           <a href="#contact" className='btn btn-primary'> Let's talk</a>
