@@ -4,6 +4,7 @@ import BookStall from "../../assets/works/bookstall_django_project.png";
 import MsiStatic from "../../assets/works/MSI_static.png";
 import MsiRespo from "../../assets/works/msi_responsive.png";
 import OGHealthCare from "../../assets/works/og_healthcare.png";
+import { FaArrowRight } from "react-icons/fa";
 
 const Portfolio = () => {
   return (
@@ -60,6 +61,11 @@ const Portfolio = () => {
           </article>
 
         </div>
+
+        <div className=''>
+          <p className='portfolio__item-scroll'><FaArrowRight /></p>
+        </div>
+
 
       </section>
     </div>
