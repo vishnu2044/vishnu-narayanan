@@ -64,10 +64,10 @@ const Services = () => {
                 <p>Maintenance and Support</p>
               </li>
             </ul>
-            {/* END OF BACK END TAGE */}
           </article>
 
-          <article className='service'>
+
+          {/* <article className='service'>
             <div className='service__head'>
               <h3>Database</h3>
             </div>
@@ -81,8 +81,9 @@ const Services = () => {
                 <p>Data Modeling and Documentation</p>
               </li>
             </ul>
-            {/* END OF FRONT END TAGE */}
-          </article>
+          </article> */}
+
+
         </div>
 
       </section>
