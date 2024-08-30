@@ -23,7 +23,7 @@ const About = () => {
             <article className='about__card'>
               <FaAward className='about__icon' />
               <h5>Experience</h5>
-              <small>1 year experience</small>
+              <small>1.5 year experience</small>
             </article>
 
             <article className='about__card'>
@@ -39,7 +39,9 @@ const About = () => {
             </article>
           </div>
           <p>
-          Passionate self-taught Python Django Full Stack Developer with a strong foundation in Python and Django, demonstrating mastery in back-end development. Proficient in utilizing React to create dynamic and responsive front-end experiences. Eager to apply my skills in a challenging and innovative work environment, contributing to cutting-edge projects and continually advancing my expertise.          </p>
+          Passionate self-taught Full Stack Developer with a strong foundation in Python and Django, 
+          demonstrating mastery in back-end development. Proficient in utilizing React to create dynamic and responsive front-end experiences. 
+          Eager to apply my skills in a challenging and innovative work environment, contributing to cutting-edge projects and continually advancing my expertise.          </p>
             
           </div>
           <a href="#contact" className='btn btn-primary'> Let's talk</a>
