@@ -1,95 +1,87 @@
-import React from 'react'
+import React from 'react';
 import "./services.css";
-import {BsCheckLg} from 'react-icons/bs';
+import { FiLayout, FiDatabase, FiLayers, FiZap } from "react-icons/fi";
 
 const Services = () => {
+  const services = [
+    {
+      icon: <FiLayout />,
+      title: "Frontend Development",
+      description: "Custom responsive web interfaces built with React, delivering pixel-perfect designs with smooth interactions and modern UX patterns.",
+      items: [
+        "Custom HTML/CSS with React integration",
+        "Interactive & dynamic React solutions",
+        "API integration & state management",
+        "Responsive design across all devices",
+      ],
+    },
+    {
+      icon: <FiDatabase />,
+      title: "Backend Development",
+      description: "Robust server-side architectures powered by Django, with secure APIs, authentication systems, and scalable database designs.",
+      items: [
+        "Custom Django application development",
+        "RESTful API design & development",
+        "Authentication & authorization systems",
+        "Database design & optimization",
+      ],
+    },
+    {
+      icon: <FiLayers />,
+      title: "Full Stack Integration",
+      description: "End-to-end solutions connecting frontend and backend seamlessly, with deployment pipelines and third-party service integrations.",
+      items: [
+        "React + Django full stack apps",
+        "Third-party service integrations",
+        "Payment gateway integration",
+        "Deployment & maintenance support",
+      ],
+    },
+    {
+      icon: <FiZap />,
+      title: "Performance & Optimization",
+      description: "Speed and efficiency focused development, ensuring lightning-fast load times, clean code architecture, and scalable systems.",
+      items: [
+        "Code optimization & refactoring",
+        "Database query optimization",
+        "Caching strategies",
+        "SEO & web performance audits",
+      ],
+    },
+  ];
+
   return (
-    <div>
-      
-      <section id='services'>
-        <h5>What is offer</h5>
-        <h2>Services</h2>
-        <div className='container services__container'>
-          <article className='service'>
-            <div className='service__head'>
-              <h3>Frontend Development</h3>
-            </div>
-            <ul className='service__list'>
-              <li>
-                <BsCheckLg className='service__list-icon'/>
-                <p>Custom HTML and CSS Development with React Integration</p>
-              </li>
-              <li>
-                <BsCheckLg className='service__list-icon'/>
-                <p>Interactive React Solutions</p>
-              </li>
-              <li>
-                <BsCheckLg className='service__list-icon'/>
-                <p>API Integration with React</p>
-              </li>
-              <li>
-                <BsCheckLg className='service__list-icon'/>
-                <p>Responsive Web Design with React Components</p>
-              </li>
-            </ul>
-            {/* END OF FRONT END TAGE */}
-          </article>
-
-          <article className='service'>
-            <div className='service__head'>
-              <h3>Backend Development</h3>
-            </div>
-            <ul className='service__list'>
-              <li>
-                <BsCheckLg className='service__list-icon'/>
-                <p>Custom Django Application Development</p>
-              </li>
-              <li>
-                <BsCheckLg className='service__list-icon'/>
-                <p> Design and Management</p>
-              </li>
-              <li>
-                <BsCheckLg className='service__list-icon'/>
-                <p>API Development</p>
-              </li>
-              <li>
-                <BsCheckLg className='service__list-icon'/>
-                <p>Authentication and Authorization</p>
-              </li>
-              <li>
-                <BsCheckLg className='service__list-icon'/>
-                <p>Integration of Third-Party Services</p>
-              </li>
-              <li>
-                <BsCheckLg className='service__list-icon'/>
-                <p>Maintenance and Support</p>
-              </li>
-            </ul>
-          </article>
-
-
-          {/* <article className='service'>
-            <div className='service__head'>
-              <h3>Database</h3>
-            </div>
-            <ul className='service__list'>
-              <li>
-                <BsCheckLg className='service__list-icon'/>
-                <p>Database Design and Optimization</p>
-              </li>
-              <li>
-                <BsCheckLg className='service__list-icon'/>
-                <p>Data Modeling and Documentation</p>
-              </li>
-            </ul>
-          </article> */}
-
-
+    <section id="services">
+      <div className="container">
+        <div className="section__header--center">
+          <span className="section__subtitle">// WHAT I OFFER</span>
+          <h2 className="section__title">My Core Competencies</h2>
+          <p className="section__description">
+            Comprehensive development services tailored to bring your vision to life.
+          </p>
         </div>
 
-      </section>
-    </div>
-  )
-}
+        <div className="services__grid">
+          {services.map((service, index) => (
+            <div className="service__card glass-card" key={index}>
+              <div className="service__card-glow"></div>
+              <div className="service__icon">{service.icon}</div>
+              <h3 className="service__title">{service.title}</h3>
+              <p className="service__description">{service.description}</p>
+              <ul className="service__items">
+                {service.items.map((item, idx) => (
+                  <li key={idx}>
+                    <span className="service__item-bullet">▸</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
-export default Services
+export default Services;

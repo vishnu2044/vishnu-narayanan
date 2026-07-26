@@ -1,72 +1,217 @@
-.container.contact_container{
-    width: 58%;
-    display: grid;
-    grid-template-columns: 30% 58%;
-    gap: 12%;
+/* ============================================
+   CONTACT
+   ============================================ */
+.contact__container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  align-items: start;
 }
 
-.contact__options{
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
+/* Left Side */
+.contact__info .section__subtitle {
+  display: block;
+  margin-bottom: 1rem;
 }
 
-.contact__option{
-    background-color: var(--color-bg-variant);
-    padding: 1.2rem;
-    border-radius: 1.2rem;
-    text-align: center;
-    border: 1px solid transparent;
-    transition: var(--transition);
+.contact__heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
 }
 
-.contact__option:hover{
-    background: transparent;
-    border-color: var(--color-primary-variant);
+.contact__description {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 400px;
 }
 
-.contact__option-icon{
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
-.contact__option a{
-    margin-top: 0.7rem;
-    display: inline-block;
-    font-size: 0.8rem;
+.contact__detail {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
 }
 
- /* >>>>>>>>>>>>>>>>>>>>>>>>> form >>>>>>>>>>>>>>>>>>>>>  */
-
- form{
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
- }
-
-input, textarea{
-    width: 100%;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    background: transparent;
-    border: 2px solid var(--color-primary-variant);
-    resize: None;
-    color: var(--color-white);
+.contact__detail-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 0.6rem;
+  background: var(--color-primary-dim);
+  color: var(--color-primary);
+  font-size: 1.1rem;
 }
 
-/* **************** MEDIA QUERIES (MEDIUM DEVICES) ****** */
+.contact__detail-label {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--color-text-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.15rem;
+}
+
+.contact__detail-value {
+  font-size: 0.88rem;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+a.contact__detail-value:hover {
+  color: var(--color-primary);
+}
+
+/* Right Side — Form */
+.contact__form-wrapper {
+  padding: 2rem;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact__form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.contact__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contact__form-group label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+}
+
+.contact__form-group input,
+.contact__form-group textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 0.6rem;
+  background: rgba(0, 212, 255, 0.03);
+  border: 1px solid var(--color-border);
+  color: var(--color-white);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  transition: var(--transition);
+  resize: none;
+}
+
+.contact__form-group input::placeholder,
+.contact__form-group textarea::placeholder {
+  color: var(--color-text-subtle);
+}
+
+.contact__form-group input:focus,
+.contact__form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary-glow);
+  background: rgba(0, 212, 255, 0.05);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.08);
+}
+
+/* Submit Button */
+.contact__submit {
+  width: 100%;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.contact__submit--sending {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Status Messages */
+.contact__status {
+  font-size: 0.82rem;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.contact__status--success {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.contact__status--error {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Availability Badge */
+.contact__availability {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 3rem;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+.contact__availability-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.5);
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
 @media screen and (max-width: 1024px) {
-    .container.contact_container{
-            grid-template-columns: 1fr;
-            gap: 2rem;
-    }
-    
+  .contact__container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .contact__description {
+    max-width: 100%;
+  }
 }
 
-/* **************** MEDIA QUERIES (SMALL DEVICES) ****** */
 @media screen and (max-width: 600px) {
-    .container.contact_container{
-        width: var(--container-width-sm);
-}
+  .contact__form-row {
+    grid-template-columns: 1fr;
+  }
 
+  .contact__form-wrapper {
+    padding: 1.5rem;
+  }
+
+  .contact__heading {
+    font-size: 2rem;
+  }
 }

@@ -1,64 +1,125 @@
-.portfolio__container {
-    display: flex;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    scroll-snap-type: x mandatory; /* Snap items to the viewport */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    
-  }
-  
-  .protfolio__item {
-    flex: 0 0 auto; /* Ensure each item takes up the full width of the viewport */
-    width: calc(35% - 0.6rem); /* Adjust for gap */
-    margin-right: 1.5rem; /* Add gap between items */
-    scroll-snap-align: start; /* Snap items to the start of the viewport */
-    background-color: aqua;
-    border-radius: 1.5rem;
-    background: var(--color-bg-variant);
-    
-  }
-  
-  /* .protfolio__item:hover {
-    border-color: var(--color-primary-variant);
-    background: transparent;
-  } */
-  
-  .portfolio__item-image {
-    border-top-left-radius: 1.5rem;
-    border-top-right-radius: 1.5rem;
-    overflow: hidden;
-  }
+/* ============================================
+   PORTFOLIO
+   ============================================ */
+.portfolio__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
 
-  .portfolio__item-scroll {
-    display: flex;
-    justify-content: end;
-    margin-right: 4rem;
-    font-size: 2rem;
-    color: var(--color-bg-variant);
+.portfolio__card {
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.portfolio__card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Image */
+.portfolio__image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/10;
+  background: var(--color-bg-card);
+}
+
+.portfolio__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.portfolio__card:hover .portfolio__image img {
+  transform: scale(1.08);
+}
+
+.portfolio__image-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 15, 30, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio__card:hover .portfolio__image-overlay {
+  opacity: 1;
+}
+
+.portfolio__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-primary-dim);
+  border: 1px solid var(--color-primary-glow);
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.portfolio__link:hover {
+  background: var(--color-primary);
+  color: var(--color-bg);
+  box-shadow: var(--shadow-glow-strong);
+  transform: scale(1.1);
+}
+
+/* Info */
+.portfolio__info {
+  padding: 1.5rem;
+}
+
+.portfolio__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.portfolio__tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.3rem;
+  background: var(--color-primary-dim);
+  color: var(--color-primary);
+  letter-spacing: 0.03em;
+}
+
+.portfolio__title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+}
+
+.portfolio__description {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.portfolio__actions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media screen and (max-width: 768px) {
+  .portfolio__grid {
+    grid-template-columns: 1fr;
   }
-  
-  .protfolio__item h3 {
-    margin: 1.2rem 0 0.5rem; /* Adjust margin for spacing */
-    padding: 0 1rem;
-  }
-  
-  .portfolio__item-cta {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    padding: 0 1rem;
-    padding-bottom: 1rem;
-  }
-  
-  /* **************** MEDIA QUERIES (SMALL DEVICES) ****** */
-  @media screen and (max-width: 600px) {
-    .protfolio__item {
-      width: calc(100% - 0.6rem); /* Adjust width for single column */
-      margin-right: 0.6rem; /* Add gap between items */
-    }
-  
-    .portfolio__container {
-      width: 100%;
-      gap: 0.6rem; /* Adjust gap between items */
-    }
-  }
-  
+}

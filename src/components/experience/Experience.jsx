@@ -1,199 +1,134 @@
-import React from 'react'
+import React from 'react';
 import "./experience.css";
-import {BsPatchCheckFill} from "react-icons/bs"
+import { FiMonitor, FiServer, FiCloud } from "react-icons/fi";
 
 const Experience = () => {
+  const techCategories = [
+    {
+      icon: <FiMonitor />,
+      title: "Frontend",
+      description: "Building responsive, interactive user interfaces",
+      skills: ["React", "JavaScript", "HTML / CSS", "Tailwind CSS", "Bootstrap", "SPFx"],
+    },
+    {
+      icon: <FiServer />,
+      title: "Backend",
+      description: "Scalable server-side architectures & APIs",
+      skills: ["Python", "Django", "FastAPI", "Django REST API", "PostgreSQL", "MongoDB"],
+    },
+    {
+      icon: <FiCloud />,
+      title: "Infrastructure",
+      description: "DevOps, cloud platforms & workflow automation",
+      skills: ["Azure DevOps", "SharePoint", "Power Automate", "GitHub", "Docker", "Linux"],
+    },
+  ];
+
+  const timeline = [
+    {
+      date: "Sep 2024 — Present",
+      company: "Clydesdale AI",
+      role: "Software Engineer",
+      description:
+        "Working as a Software Engineer with 1.7 years of experience developing enterprise web applications and automation solutions. Primary expertise in React, Python, Django, FastAPI, Azure DevOps, SharePoint, Power Automate, and workflow automation with a strong focus on building SharePoint Framework (SPFx) solutions.",
+      highlights: [
+        "Corporate intranet development with SPFx",
+        "Job hiring automation systems",
+        "EMDs management systems & business process automation",
+        "SharePoint Framework solutions & Power Automate workflows",
+      ],
+    },
+    {
+      date: "Apr 2024 — Aug 2024",
+      company: "BytezTechweb Solutions Pvt. Ltd",
+      location: "Surat, Gujarat (Remote)",
+      role: "Python Developer",
+      description:
+        "Worked remotely contributing to a dynamic and growth-oriented environment. As a Python Django developer, successfully completed several projects, showcasing back-end development expertise. Also involved with Next.js, PostgreSQL, and Vue.js.",
+      highlights: [
+        "Built full-stack web applications using Django & React",
+        "Integrated third-party APIs and payment gateways",
+        "Designed scalable database architectures",
+      ],
+    },
+    {
+      date: "2023 — 2024",
+      company: "Brototype",
+      role: "Python Full Stack Developer (Internship)",
+      description:
+        "Served as a Django React Full Stack Developer through self-directed learning. Experienced significant expansion of programming skills, resulting in the successful completion of two major projects and several minor projects.",
+      highlights: [
+        "Integrating React and Django for seamless experiences",
+        "Self-taught REST API development",
+        "Delivered 2 major and multiple minor projects",
+      ],
+    },
+  ];
+
   return (
-    <div>
-      <section id='experience'>
-        <h5>what Skills I Have</h5>
-        <h2>My experience</h2>
-        
-        <div className='container experience__container'>
-          <div className="experience__frontend">
-            <h3>Frontend Development</h3>
-            <div className="experience__content">
-              <article className='experience__details'>
-                <BsPatchCheckFill className="experience__details_icon" />
+    <section id="experience">
+      {/* Technical Stack Section */}
+      <div className="container">
+        <div className="section__header--center">
+          <span className="section__subtitle">// MY TOOLKIT</span>
+          <h2 className="section__title">Technical Stack</h2>
+          <p className="section__description">
+            A comprehensive breakdown of my technical abilities across the full development pipeline.
+          </p>
+        </div>
+
+        <div className="tech__grid">
+          {techCategories.map((cat, catIdx) => (
+            <div className="tech__card glass-card" key={catIdx}>
+              <div className="tech__card-header">
+                <div className="tech__card-icon">{cat.icon}</div>
                 <div>
-                  <h4>React</h4>
-                  <small className='text-light'>Experienced</small>
+                  <h3 className="tech__card-title">{cat.title}</h3>
+                  <p className="tech__card-desc">{cat.description}</p>
                 </div>
-              </article>
-
-              <article className='experience__details'>
-                <BsPatchCheckFill className="experience__details_icon" />
-                <div>
-                  <h4>Tailwind</h4>
-                  <small className='text-light'>Experienced</small>
-                </div>
-              </article>
-              
-              <article className='experience__details'>
-                <BsPatchCheckFill className="experience__details_icon" />
-                <div>
-                  <h4>HTML</h4>
-                  <small className='text-light'>Experienced</small>
-                </div>
-              </article>
-
-              <article className='experience__details'>
-                <BsPatchCheckFill className="experience__details_icon" />
-                <div>
-                  <h4>Bootstrap</h4>
-                  <small className='text-light'>intermediate</small>
-                </div>
-              </article>
-
-              <article className='experience__details'>
-                <BsPatchCheckFill className="experience__details_icon" />
-                <div>
-                  <h4>JavaScript</h4>
-                  <small className='text-light'>intermediate</small>
-                </div>
-              </article>
-
-              <article className='experience__details'>
-                <BsPatchCheckFill className="experience__details_icon" />
-                <div>
-                  <h4>CSS</h4>
-                  <small className='text-light'>intermediate</small>
-                </div>
-              </article>
-
-
-            </div>
-
-          </div>
-          <div className="experience__backend">
-            <h3>Backend Development</h3>
-            <div className="experience__content">
-              <article className='experience__details'>
-                <BsPatchCheckFill className="experience__details_icon" />
-                <div>
-                  <h4>Python</h4>
-                  <small className='text-light'>Experienced</small>
-                </div>
-
-              </article>
-
-              <article className='experience__details'>
-                <BsPatchCheckFill className="experience__details_icon" />
-                <div>
-                  <h4>django</h4>
-                  <small className='text-light'>Experienced</small>
-                </div>
-
-              </article>
-
-              <article className='experience__details'>
-                <BsPatchCheckFill className="experience__details_icon" />
-                <div>
-                  <h4>django Rest API</h4>
-                  <small className='text-light'>Experienced</small>
-                </div>
-
-              </article>
-
-              <article className='experience__details'>
-                <BsPatchCheckFill className="experience__details_icon" />
-                <div>
-                  <h4>django Rest API</h4>
-                  <small className='text-light'>Experienced</small>
-                </div>
-
-              </article>
-
-              <article className='experience__details'>
-                <BsPatchCheckFill className="experience__details_icon" />
-                <div>
-                  <h4>PostgreSQL</h4>
-                  <small className='text-light'>intermediate</small>
-                </div>
-              </article>
-
-              <article className='experience__details'>
-                <BsPatchCheckFill className="experience__details_icon" />
-                <div>
-                  <h4>MongoDB</h4>
-                  <small className='text-light'>Begginer</small>
-                </div>
-              </article>
-
-              <article className='experience__details'>
-                <BsPatchCheckFill className="experience__details_icon" />
-                <div>
-                  <h4>GitHub</h4>
-                  <small className='text-light'>intermediate</small>
-                </div>
-                </article>
               </div>
+              <div className="tech__tags">
+                {cat.skills.map((skill, skillIdx) => (
+                  <span className="tech__tag" key={skillIdx}>{skill}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
 
-          </div>
-
-
+      {/* Professional History Section */}
+      <div className="container experience__history">
+        <div className="section__header--center">
+          <span className="section__subtitle">// CAREER</span>
+          <h2 className="section__title">Professional History</h2>
         </div>
 
-        <div className='container experience__company_details__container'>
-          <div className="experience__frontend">
-            <h3>Experience History</h3>
-
-            <div className="experience__company__content">
-              <article className='experience__details'>
-                <BsPatchCheckFill className="experience__details_icon" />
-                <div>
-                  <h4>BytezTechWeb Solution Pvt. Ltd</h4>
-                  <div style={{ display: 'flex' }}>
-                    <p className='text-light' style={{ marginLeft: '16px', fontSize: '14px' }}>Python developer</p>
-                    <p className='text-light' style={{ marginLeft: '16px', fontSize: '14px' }}>6 months</p> 
-                  </div>
-                </div>
-              </article>
-              <article className='experience__details'>
-                <p></p>
-                <p></p>
-                <div>
-                  <small className=''>Since April 2024, I have been working remotely at Byteztechweb Solutions, 
-                    contributing to a dynamicandgrowth-oriented environment. As a Python Django developer, 
-                    I have successfully completed several projects,showcasing my back-end development expertise. 
-                    My role also involves working with Next.js, PostgreSQL, andVue.js, ensuring seamless integration and functionality. 
-                    This experience has significantly enhanced my technical skills and ability to deliver high-quality solutions.
-                  </small>
-                </div>
-              </article>
+        <div className="timeline">
+          <div className="timeline__line"></div>
+          {timeline.map((item, index) => (
+            <div className={`timeline__item ${index % 2 === 0 ? 'timeline__item--left' : 'timeline__item--right'}`} key={index}>
+              <div className="timeline__dot">
+                <div className="timeline__dot-inner"></div>
+              </div>
+              <div className="timeline__card glass-card">
+                <span className="timeline__date">{item.date}</span>
+                <h3 className="timeline__company">{item.company}</h3>
+                {item.location && <span className="timeline__location">{item.location}</span>}
+                <span className="timeline__role">{item.role}</span>
+                <p className="timeline__description">{item.description}</p>
+                <ul className="timeline__highlights">
+                  {item.highlights.map((h, hIdx) => (
+                    <li key={hIdx}>{h}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
-
-            <div className="experience__company__content" >
-              <article className='experience__details'>
-                <BsPatchCheckFill className="experience__details_icon" />
-                <div>
-                  <h4>Brototype</h4>
-                  <div style={{ display: 'flex' }}>
-                    <p className='text-light' style={{ marginLeft: '16px', fontSize: '14px' }}>Python Full stack developer (Internship)</p>
-                    <p className='text-light' style={{ marginLeft: '16px', fontSize: '14px' }}>1 year</p> 
-                  </div>
-                </div>
-              </article>
-              <article className='experience__details'>
-                <p></p>
-                <p></p>
-                <div>
-                  <small className=''>During my time as a Python Django Full Stack Web Developer at Brototype, 
-                    my role involvedservingasaDjango React Full Stack Developer. Through self-directed learning, 
-                    I experienced a significant expansionofprogramming skills, resulting in the successful completion of two major projects and several minor projects.
-                    The hands-on experience provided a robust understanding of full-stack development, enabling effective contributions to diverse projects</small>
-                </div>
-              </article>
-            </div>
-          </div>
-
-
+          ))}
         </div>
-        
+      </div>
+    </section>
+  );
+};
 
-      </section>
-    </div>
-  )
-}
-
-export default Experience
+export default Experience;
